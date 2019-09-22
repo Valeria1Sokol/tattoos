@@ -479,12 +479,12 @@
 
     #shineBlack {
         animation: shinyBlack 2s infinite;
-        -web-animation: shinyBlack 2s infinite;
+        -webkit-animation: shinyBlack 2s infinite;
     }
 
     #shineRed {
         animation: shinyRed 2s infinite;
-        -web-animation: shinyRed 2s infinite;
+        -webkit-animation: shinyRed 2s infinite;
 
     }
 
