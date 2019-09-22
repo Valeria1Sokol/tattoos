@@ -48,16 +48,16 @@
 <div class="builder-creator">
     <div class="builder-navigation">
         <div class="builder-navigation-img active">
-            <img src="images/builder_text.png" alt="" (click)="goToStep(1)" class="img-fluid" id="builder-navigation-text">
+            <img src="images/builder_text.png" alt="" class="img-fluid" id="builder-navigation-text">
         </div>
         <div class="builder-navigation-img">
-            <img src="images/builder_photo.png" alt="" (click)="goToStep(2)" class="img-fluid" id="builder-navigation-photo">
+            <img src="images/builder_photo.png" alt="" class="img-fluid" id="builder-navigation-photo">
         </div>
         <div class="builder-navigation-img">
-            <img src="images/builder_video.png" alt="" (click)="goToStep(3)" class="img-fluid" id="builder-navigation-video">
+            <img src="images/builder_video.png" alt="" class="img-fluid" id="builder-navigation-video">
         </div>
         <div class="builder-navigation-img">
-            <img src="images/builder_audio.png" alt="" (click)="goToStep(4)" class="img-fluid" id="builder-navigation-audio">
+            <img src="images/builder_audio.png" alt="" class="img-fluid" id="builder-navigation-audio">
         </div>
     </div>
 
@@ -66,72 +66,9 @@
             <img src="../../assets/images/builder_content_start.png" alt="" class="builder-content-img img-fluid">
         </div> -->
         <div class="builder-box builder-box-text">
-            <textarea [(ngModel)]="story_text" (focus)="focusfn()" (focusout)="focusOut()" name="" id="" placeholder="Add text to introduce your story ** Required **" class="builder-box-textarea"></textarea>
-        </div>
-        <div class="builder-box builder-box-photo">
-            <div class="builder-box-tip">
-                Upload images from your device OR take live snaps to bring your tattoo memory to life
-            </div>
-            <div class="d-flex justify-content-center">
-                <label class="btn btn-dark" for="multi_img" id="shineBlack">Upload</label>
-                <input (change)="getFilesImage($event)" id="multi_img" type="file" name="img_2[]" accept="image/*" multiple="">
-                <!-- <button class="btn btn-dark">
-                    Upload
-                </button> -->
-            </div>
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-4" *ngFor="let image of images; let i = index">
-                        <div (click)="removeImage(i)" class="selected_green_icon"><i class="fas fa-times"></i></div>
-                        <img (click)="image_modal(i)" data-toggle="modal" data-target="#imagesModal" [src]="image">
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="builder-box builder-box-video">
-            <div class="builder-box-tip">
-                Upload videos from your device OR record them live to add memories to you story
-            </div>
-            <div class="d-flex justify-content-center">
-                <label class="btn btn-dark" for="multi_vid" id="shineBlack">Upload</label>
-                <input (change)="getFilesVideo($event)" id="multi_vid" type="file" name="vid_2[]" accept="video/*" multiple="" />
-            </div>
-            <div id="old_videos" class="old_images">
-              
-                <div style="clear:both;"></div>
-            </div>
-            <p style="color:#fff; text-align: center;">{{ video_msg }}</p>
-        </div>
-        <div class="builder-box builder-box-audio">
-            <div class="builder-box-tip">
-                Upload audio, it should be an mp3
-            </div>
-            <div class="d-flex justify-content-center">
-                <label class="btn btn-dark" for="multi_aud" id="shineBlack">Upload</label>
-                <input (change)="getFilesAudio($event)" id="multi_aud" type="file" name="aud_2[]" accept="audio/*" />
-            </div>
-            <div class="audio_column">
-                <div *ngFor="let audio of current_audios; let i = index">
-                    <audio class="" controls="controls">
-                        <source [src]="file_url + audio.download_link">
-                    </audio>
-                    <div (click)="removeAudio(i)" class="selected_green_icon">
-                        <i class="fas fa-times"></i>
-                    </div>
-                </div>
-            </div>
-            <p style="color:#fff; text-align: center;">{{ audio_msg }}</p>
+            <textarea name="" id="" placeholder="Add text to introduce your story ** Required **" class="builder-box-textarea"></textarea>
         </div>
          <div class="yourimg"></div>
-    </div>
-
-    <div class="builder-text">
-        <div class="builder-heading">
-            
-        </div>
-        <!-- <p>
-            Start by customising your ink with the help of the tools above. text, images, videos and voice notes / audio can all be included.
-        </p> -->
     </div>
    
 
